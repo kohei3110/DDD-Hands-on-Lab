@@ -309,12 +309,28 @@ classDiagram
         +updateLearningData()
     }
     
-    Customer ||--o{ Opportunity : "has many"
-    Customer ||--|| AIAnalysis : "analyzed by"
-    Opportunity ||--|| Proposal : "has"
+    Customer --> Opportunity : "has many"
+    Customer --> AIAnalysis : "analyzed by"
+    Opportunity --> Proposal : "generates"
     AIAgent ..> AIAnalysis : "creates"
     AIAgent ..> Proposal : "generates"
 ```
+
+#### 📊 ドメインモデル関係性の説明
+
+**アグリゲート間の関係**:
+- `Customer --> Opportunity`: 一つの顧客が複数の商談を持つ（1対多）
+- `Customer --> AIAnalysis`: 顧客毎にAI分析が実行される（1対1）
+- `Opportunity --> Proposal`: 各商談に対して提案書が作成される（1対1）
+
+**ドメインサービスとの関係**:
+- `AIAgent ..> AIAnalysis`: AIエージェントがAI分析を生成・実行（依存関係）
+- `AIAgent ..> Proposal`: AIエージェントが提案書を自動生成（依存関係）
+
+**設計原則**:
+- アグリゲート間は参照IDで結合（直接オブジェクト参照ではない）
+- 境界づけられたコンテキスト内での整合性保証
+- ドメインサービスによる複雑なビジネスロジックの実装
 
 ### 3.2 ドメインサービスの特定
 
