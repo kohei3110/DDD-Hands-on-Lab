@@ -462,6 +462,7 @@ Azure移行後: 平均 月額180万円（40%削減）
 
 **Workshop Series:**
 - [Part 1: オープニング・DDD基礎講座](workshop-part1-opening-and-ddd-basics.md)
-- [Part 2: 既存業務・システム整理 & 現状課題の棚卸し](workshop-part2-current-system-analysis.md)
-- [Part 3: ドメインモデリング体験](workshop-part3-domain-modeling.md)
-- **Part 4: システム構成とドメインのマッピング & Azure移行メリット** (現在のファイル)
+---
+
+**Previous:** [Part 3: ドメインモデリング体験](workshop-part3-domain-modeling.md)  
+**Next:** [Part 5: クロージング・成果統合・今後のアクション](workshop-part5-closing.md)
